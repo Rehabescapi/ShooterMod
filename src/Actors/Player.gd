@@ -84,6 +84,9 @@ func _physics_process(_delta):
 	if Input.is_action_just_pressed("Cannon" + action_suffix):
 		print("Cannon Equiped")
 		type = 3
+	if Input.is_action_just_pressed("MachineGun" + action_suffix):
+		print("Machine Equiped")
+		type = 4
 
 
 	if Input.is_action_just_pressed("shoot" + action_suffix):
@@ -93,6 +96,9 @@ func _physics_process(_delta):
 			is_shooting = gun.shotgunshoot(sprite.scale.x)
 		elif type == 3 : 
 			is_shooting = gun.cannonshoot(sprite.scale.x)
+
+	if Input.is_action_pressed("shoot" + action_suffix) && type ==4 :
+		gun.shotgunshoot(sprite.scale.x)
 
 	var animation = get_new_animation(is_shooting)
 	if animation != animation_player.current_animation and shoot_timer.is_stopped():
