@@ -1,3 +1,21 @@
+Equipment and Inventory changes.
+
+Edited the 
+Actors/gun.gd
+
+Edited the 
+Actors/Player.gd to allow inventory and different gun types be possible enabled.
+
+cloned the 
+Objects/bullet.tscn file to create a 
+Objects/cannon.tscn
+
+
+
+Reduced the volume
+
+
+
 # 2D Platformer
 
 This demo is a pixel art 2D platformer with graphics and sound.

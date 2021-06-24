@@ -75,6 +75,8 @@ func _physics_process(_delta):
 	# creating new variables.
 	var is_shooting = false
 	
+
+	## Start of Modding
 	if Input.is_action_just_pressed("Gun" + action_suffix):
 		type = 1
 
@@ -99,7 +101,8 @@ func _physics_process(_delta):
 
 	if Input.is_action_pressed("shoot" + action_suffix) && type ==4 :
 		gun.shotgunshoot(sprite.scale.x)
-
+	##End Of Modding
+	
 	var animation = get_new_animation(is_shooting)
 	if animation != animation_player.current_animation and shoot_timer.is_stopped():
 		if is_shooting:
